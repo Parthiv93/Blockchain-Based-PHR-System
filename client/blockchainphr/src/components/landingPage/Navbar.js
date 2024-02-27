@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../assets/img/landingPage/logo.png";
+import logo from "../../assets/img/landingPage/logo1.png";
+import "./styles.css"
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,11 +8,11 @@ export default function Navbar() {
   const location = useLocation();
   return (
     <nav className="lg:bg-white lg:w-screen lg:h-14 shadow-sm lg:px-16 lg:py-3 flex justify-items-center items-center  w-full ">
-      <img
-        src={logo}
-        alt="logo"
-        className="lg:h-10 lg:pr-3 h-10 pr-4 pl-2 mt-2"
-      />
+<img
+  src={logo}
+  alt="logo"
+  className="lg:h-10 lg:pr-3 h-10 pr-4 pl-2 mt-2 filter grayscale"
+/>
       <h1 className="font-poppins font-bold text-sm lg:text-xl mt-2 mb-2">
         <Link to="/">CareCryption</Link>
       </h1>

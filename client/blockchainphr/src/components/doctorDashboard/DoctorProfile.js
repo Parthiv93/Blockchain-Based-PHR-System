@@ -159,12 +159,6 @@ const DoctorProfile = (props) => {
 
               <h1 className="ml-4">{doctor.orgNumber}</h1>
             </div>
-            {/* <div className="flex mt-3">
-              <img src={mail} className="w-5 h-6 " />
-
-              <h1 className="mx-4">jayeshspatil1602@gmail.com</h1>
-            </div> */}
-
             <div className="flex mt-6">
               <img src={address} className="h-7 w-8" />
               <div className="ml-4 ">

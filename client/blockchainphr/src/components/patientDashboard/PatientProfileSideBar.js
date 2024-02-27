@@ -29,7 +29,7 @@ const PatientProfileSideBar = (props) => {
           </div>
           <div className="heading font-poppins font-bold text-xl  ">
             <Link to="/">
-              <h1>Public health Record System</h1>
+              <h1>CareCryption</h1>
             </Link>
           </div>
         </div>

@@ -7,5 +7,44 @@
     margin-right: 15px; /* Adjust the value as per your preference */
     margin-left: 2px;
   }
-
+  .app-container {
+    height: 100vh; /* Make the container fill the entire viewport height */
+    overflow: hidden; /* Hide overflow content */
+  }
   
+  .fixed-content {
+    position: fixed; /* Fix the content in place */
+    /* Add other styles as needed */
+  }
+  .ml-2 {
+    border: 6px solid #00c29e;
+    border-radius: 10px;
+    margin-top: 150px;
+    text-decoration-line: none;
+    width: 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.custom-text {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: bold; 
+  font-size: 1.5rem;
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+}
+.custom-link:hover {
+  cursor: pointer;
+}
+.custom-link li {
+  transition: transform 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-link li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+

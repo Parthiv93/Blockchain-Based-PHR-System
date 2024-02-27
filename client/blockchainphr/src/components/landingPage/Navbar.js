@@ -7,16 +7,16 @@ import { Link, useLocation } from "react-router-dom";
 export default function Navbar() {
   const location = useLocation();
   return (
-    <nav className="lg:bg-white lg:w-screen lg:h-14 shadow-sm lg:px-16 lg:py-3 flex justify-items-center items-center  w-full ">
+    <nav className="flex items-center w-full shadow-sm lg:bg-white lg:w-screen lg:h-14 lg:px-16 lg:py-3 justify-items-center ">
 <img
   src={logo}
   alt="logo"
-  className="lg:h-10 lg:pr-3 h-10 pr-4 pl-2 mt-2 filter grayscale"
+  className="h-10 pl-2 pr-5 mt-2 lg:h-10 lg:pr-3 filter grayscale"
 />
-      <h1 className="font-poppins font-bold text-sm lg:text-xl mt-2 mb-2">
+      <h1 className="custom-text">
         <Link to="/">CareCryption</Link>
       </h1>
-      <ul className="flex ml-auto lg:w-60 justify-evenly  font-lato font-semibold w-64 ">
+      <ul className="flex ml-auto font-semibold w-69 lg:w-90 justify-evenly font-lato custom-link">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -28,7 +28,7 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <button className="bg-primary lg:py-2 lg:px-3 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary py-1 px-2 mr-2">
+      <button className="px-2 py-1 mr-2 font-semibold rounded shadow-sm bg-primary lg:py-2 lg:px-3 font-poppins hover:bg-bgsecondary">
         {location.pathname === "/register" ? (
           <Link to="/">Login</Link>
         ) : (

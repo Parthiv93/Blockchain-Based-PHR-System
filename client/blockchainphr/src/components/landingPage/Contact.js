@@ -53,14 +53,14 @@ const Contact = (props) => {
                 <h1 className="font-bold font-poppins text-2xl mt-4 ">
                   Email :
                 </h1>
-                <h1 className="font-poppins text-xl">admins@gmail.com</h1>
+                <h1 className="font-poppins text-xl">projectk324@gmail.com</h1>
               </div>
               <div>
                 <h1 className="font-bold font-poppins text-2xl mt-4 ">
                   Address :
                 </h1>
                 <h2 className="font-poppins text-xl">
-                  first floor, stark tower , near wall street, new york{" "}
+                  Ernakulam{" "}
                 </h2>
               </div>
             </div>

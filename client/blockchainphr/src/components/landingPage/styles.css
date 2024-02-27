@@ -1,0 +1,11 @@
+.grayscale {
+     filter: hue-rotate(70deg);
+    margin-top: 10px;
+    margin-left: 20;
+  }
+  ul.flex li {
+    margin-right: 15px; /* Adjust the value as per your preference */
+    margin-left: 2px;
+  }
+
+  

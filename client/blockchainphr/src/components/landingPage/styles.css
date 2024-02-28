@@ -7,5 +7,15 @@
     margin-right: 15px; /* Adjust the value as per your preference */
     margin-left: 2px;
   }
-
+  .custom-link:hover {
+    cursor: pointer;
+  }
+  .custom-link li {
+    transition: transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+  }
   
+  .custom-link li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }

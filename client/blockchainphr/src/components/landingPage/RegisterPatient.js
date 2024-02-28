@@ -119,19 +119,19 @@ export default function Register(props) {
     }
   };
   return (
-    <div className="body overflow-hidden">
+    <div className="overflow-hidden body">
       <Navbar></Navbar>
-      <div className="bg-secoundry w-full">
+      <div className="w-full bg-secoundry">
         <div className="">
-          <div className=" flex justify-center mt-4">
-            <h1 className="  p-2 px-8 rounded font-bold text-5xl">Register</h1>
+          <div className="flex justify-center mt-4 ">
+            <h1 className="p-2 px-8 text-5xl font-bold rounded ">Register</h1>
           </div>
 
           <form
-            className="font-poppins lg:ml-60  lg:px-8 lg:py-4 bg-white shadow-lg rounded max-w-screen-lg mt-8 mb-4 "
+            className="max-w-screen-lg mt-8 mb-4 bg-white rounded shadow-lg font-poppins lg:ml-60 lg:px-8 lg:py-4 "
             onSubmit={handleRegisterPatient}
           >
-            <div className="flex   mt-2 bg-bgsecondary w-fit  justify-between rounded mx-auto">
+            <div className="flex justify-between mx-auto mt-2 rounded bg-bgsecondary w-fit">
               <button
                 onClick={() => setToggle("Patient")}
                 className={
@@ -160,13 +160,13 @@ export default function Register(props) {
                   : "hidden"
               }
             >
-              <h1 className="font-bold flex justify-center mt-6">
+              <h1 className="flex justify-center mt-6 font-bold">
                 For register as doctor contact to admin with you all information
               </h1>
-              <div className="border-4 p-4 mx-auto w-1/2 rounded-xl mt-8  ">
+              <div className="w-1/2 p-4 mx-auto mt-8 border-4 rounded-xl ">
                 <h1>send your all information</h1>
                 <div>
-                  <div className=" rounded-xl p-4 mt-4 ">
+                  <div className="p-4 mt-4 rounded-xl">
                     <h1 className="font-bold">Email :</h1>
                     <p>admin@gmail.com</p>
                   </div>
@@ -175,13 +175,13 @@ export default function Register(props) {
             </div>
 
             <div className={Toggle === "Patient" ? "" : "hidden"}>
-              <div className="lg:grid lg:grid-cols-4 lg:gap-2 mt-4 mr-4 grid grid-cols-4 gap-2">
-                <label className="font-bold lg:text-xl font-poppins px-4 my-4 ">
+              <div className="grid grid-cols-4 gap-2 mt-4 mr-4 lg:grid lg:grid-cols-4 lg:gap-2">
+                <label className="px-4 my-4 font-bold lg:text-xl font-poppins ">
                   Name
                 </label>
                 <div>
                   <input
-                    className="bg-blue-100 rounded lg:h-10 lg:pl-4 mt-4 lg:text-md text-sm h-8 px-2"
+                    className="h-8 px-2 mt-4 text-sm bg-blue-100 rounded lg:h-10 lg:pl-4 lg:text-md"
                     required
                     placeholder="first name"
                     value={patient.name.firstName}
@@ -193,7 +193,7 @@ export default function Register(props) {
                   ></input>
                 </div>
                 <input
-                  className="bg-blue-100 rounded lg:h-10 lg:pl-4 mt-4 lg:text-md text-sm h-8 px-2"
+                  className="h-8 px-2 mt-4 text-sm bg-blue-100 rounded lg:h-10 lg:pl-4 lg:text-md"
                   required
                   placeholder="middle name"
                   value={patient.name.middleName}
@@ -204,7 +204,7 @@ export default function Register(props) {
                   }}
                 ></input>
                 <input
-                  className="bg-blue-100 rounded lg:h-10 lg:pl-4 mt-4 lg:text-md text-sm h-8 px-2"
+                  className="h-8 px-2 mt-4 text-sm bg-blue-100 rounded lg:h-10 lg:pl-4 lg:text-md"
                   required
                   placeholder="last name"
                   value={patient.name.surName}
@@ -215,11 +215,11 @@ export default function Register(props) {
                   }}
                 ></input>
               </div>
-              <div className="lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="font-bold lg:text-xl px-4 ">Birthdate</label>
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 lg:grid">
+                <label className="px-4 font-bold lg:text-xl ">Birthdate</label>
                 <input
                   type="date"
-                  className=" bg-blue-100 lg:h-10 rounded pl-4 h-8"
+                  className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                   required
                   value={patient.dob}
                   onChange={(e) => {
@@ -229,8 +229,8 @@ export default function Register(props) {
                   }}
                 ></input>
               </div>
-              <div className="lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="font-bold lg:text-xl px-4 ">
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 lg:grid">
+                <label className="px-4 font-bold lg:text-xl ">
                   Mobile No.{" "}
                 </label>
 
@@ -238,7 +238,7 @@ export default function Register(props) {
                   type="tel"
                   placeholder="mobile no."
                   required
-                  className="pl-4 bg-blue-100 lg:h-10  rounded h-8"
+                  className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                   value={patient.mobile}
                   onChange={(e) => {
                     let temppatient = { ...patient };
@@ -248,8 +248,8 @@ export default function Register(props) {
                 ></input>
               </div>
 
-              <div className=" aadhar lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="font-bold lg:text-xl px-4 ">
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 aadhar lg:grid">
+                <label className="px-4 font-bold lg:text-xl ">
                   Aadhar Card No.{" "}
                 </label>
                 <div>
@@ -257,7 +257,7 @@ export default function Register(props) {
                     type="text"
                     placeholder="Aadhar card No."
                     required
-                    className="pl-4 bg-blue-100 lg:h-10  rounded h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                     value={patient.adharCard}
                     onChange={(e) => {
                       let temppatient = { ...patient };
@@ -265,20 +265,20 @@ export default function Register(props) {
                       setPatient(temppatient);
                     }}
                   ></input>
-                  <span className="text-xs text-red-500 py-1">
+                  <span className="py-1 text-xs text-red-500">
                     {errors.adharCard}
                   </span>
                 </div>
               </div>
 
               <div className="grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="  lg:text-xl font-bold px-4 ">Email</label>
+                <label className="px-4 font-bold lg:text-xl">Email</label>
                 <input
                   type="email"
                   id="email"
                   placeholder="e.g : abcdefg@gmail.com"
                   required
-                  className="bg-blue-100 lg:h-10 rounded pl-4 col-span-2 h-8"
+                  className="h-8 col-span-2 pl-4 bg-blue-100 rounded lg:h-10"
                   value={patient.email}
                   onChange={(e) => {
                     let temppatient = { ...patient };
@@ -289,12 +289,12 @@ export default function Register(props) {
               </div>
 
               <div className="grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="  lg:text-xl font-bold px-4">
+                <label className="px-4 font-bold lg:text-xl">
                   Blood Group
                 </label>
                 <div className="">
                   <select
-                    className="pl-4 lg:w-1/2 bg-blue-100 lg:h-10  rounded  h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:w-1/2 lg:h-10"
                     id="blood-group"
                     value={patient.bloodGroup}
                     onChange={(e) => {
@@ -317,13 +317,13 @@ export default function Register(props) {
               </div>
 
               <div className="grid grid-cols-4 gap-2 mt-4 mr-4 grid-flow-dense ">
-                <label className=" lg:text-xl font-bold px-4 mb-8 col-span-1">
+                <label className="col-span-1 px-4 mb-8 font-bold lg:text-xl">
                   Address
                 </label>
-                <div className="grid grid-cols-2 lg:gap-8 gap-2 col-span-3 ">
+                <div className="grid grid-cols-2 col-span-3 gap-2 lg:gap-8 ">
                   <input
                     type="text"
-                    className="bg-blue-100 lg:h-10  rounded pl-4 h-8 "
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10 "
                     required
                     placeholder="building/area"
                     value={patient.address.building}
@@ -335,7 +335,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 lg:h-10  rounded pl-4 h-8 "
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10 "
                     required
                     placeholder="village/city"
                     value={patient.address.city}
@@ -347,9 +347,9 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 lg:h-10  rounded  pl-4 h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                     required
-                    placeholder="Taluka"
+                    placeholder="Taluk"
                     value={patient.address.taluka}
                     onChange={(e) => {
                       let temppatient = { ...patient };
@@ -359,7 +359,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 lg:h-10  rounded  pl-4 h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                     required
                     placeholder="District"
                     value={patient.address.district}
@@ -371,7 +371,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="number"
-                    className="bg-blue-100 lg:h-10  rounded  pl-4 h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                     required
                     placeholder="Pin-code"
                     value={patient.address.pincode}
@@ -383,7 +383,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 lg:h-10  rounded  pl-4 h-8"
+                    className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                     placeholder="State"
                     value={patient.address.state}
                     onChange={(e) => {
@@ -395,14 +395,14 @@ export default function Register(props) {
                 </div>
               </div>
 
-              <div className="lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label type="password" className="  lg:text-xl font-bold px-4">
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 lg:grid">
+                <label type="password" className="px-4 font-bold lg:text-xl">
                   Password
                 </label>
                 <input
                   type="password"
                   id="password"
-                  className="bg-blue-100 lg:h-10  rounded pl-4 h-8"
+                  className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                   required
                   placeholder="password"
                   value={patient.password}
@@ -414,27 +414,27 @@ export default function Register(props) {
                 ></input>
               </div>
 
-              <div className="lg:grid lg:grid-cols-4 gap-2 mt-4 mr-4 flex">
-                <label type="password" className=" lg:text-xl font-bold px-4">
+              <div className="flex gap-2 mt-4 mr-4 lg:grid lg:grid-cols-4">
+                <label type="password" className="px-4 font-bold lg:text-xl">
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   id="password"
-                  className="bg-blue-100 lg:h-10  rounded lg:pl-4 h-8 pl-2"
+                  className="h-8 pl-2 bg-blue-100 rounded lg:h-10 lg:pl-4"
                   required
                   placeholder="Confirm password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                 ></input>
-                <span className="text-sm py-1 text-red-500">
+                <span className="py-1 text-sm text-red-500">
                   {passwordError}
                 </span>
               </div>
 
-              <div className="lg:grid lg:grid-cols-10 gap-2 mt-8 mr-4">
+              <div className="gap-2 mt-8 mr-4 lg:grid lg:grid-cols-10">
                 <div className="col-span-5">
-                  <label className=" lg:text-xl font-bold px-4 grid col-start-1 col-span-3">
+                  <label className="grid col-span-3 col-start-1 px-4 font-bold lg:text-xl">
                     Name of any permanant disease (if any)
                   </label>
                 </div>
@@ -446,7 +446,7 @@ export default function Register(props) {
                         className="grid grid-cols-7 col-span-1 mb-3"
                       >
                         <input
-                          className="bg-blue-100 lg:h-10 col-span-3 rounded lg:pl-4 h-8 pl-2"
+                          className="h-8 col-span-3 pl-2 bg-blue-100 rounded lg:h-10 lg:pl-4"
                           type="text"
                           name="disease"
                           value={disease.disease}
@@ -461,7 +461,7 @@ export default function Register(props) {
                           }}
                         />
                         <input
-                          className="bg-blue-100 lg:h-10 col-span-3  rounded lg:pl-4 h-8 pl-2 ml-4"
+                          className="h-8 col-span-3 pl-2 ml-4 bg-blue-100 rounded lg:h-10 lg:pl-4"
                           type="text"
                           name="yrs"
                           placeholder="years e.g 3"
@@ -489,7 +489,7 @@ export default function Register(props) {
                             }
                           }}
                         >
-                          <img src={minus_logo} alt="" className="h-8 w-8" />
+                          <img src={minus_logo} alt="" className="w-8 h-8" />
                         </div>
                       </div>
                     );
@@ -497,22 +497,22 @@ export default function Register(props) {
                 </div>
 
                 <div onClick={addDisease} className="col-span-1">
-                  <img src={plus_logo} alt="" className="h-8 w-8" />
+                  <img src={plus_logo} alt="" className="w-8 h-8" />
                 </div>
               </div>
             </div>
 
             <div className={Toggle === "Patient" ? "" : "hidden"}>
               <div className="flex justify-center">
-                <h1 className=" p-4 rounded font-bold lg:text-3xl text-xl mt-2">
+                <h1 className="p-4 mt-2 text-xl font-bold rounded lg:text-3xl">
                   Emergency Contact Details
                 </h1>
               </div>
 
-              <div className="lg:grid grid-cols-4 gap-2 mt-8 mr-4 flex">
-                <label className="font-bold lg:text-xl px-4 ">Name</label>
+              <div className="flex grid-cols-4 gap-2 mt-8 mr-4 lg:grid">
+                <label className="px-4 font-bold lg:text-xl ">Name</label>
                 <input
-                  className="bg-blue-100 rounded h-10 pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   placeholder="first name"
                   value={patient.contactPerson.name.firstName}
                   onChange={(e) => {
@@ -522,7 +522,7 @@ export default function Register(props) {
                   }}
                 ></input>
                 <input
-                  className="bg-blue-100 rounded h-10 pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   placeholder="last name"
                   value={patient.contactPerson.name.surName}
                   onChange={(e) => {
@@ -532,8 +532,8 @@ export default function Register(props) {
                   }}
                 ></input>
               </div>
-              <div className="lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="font-bold lg:text-xl px-4 ">
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 lg:grid">
+                <label className="px-4 font-bold lg:text-xl ">
                   Mobile No.{" "}
                 </label>
 
@@ -541,7 +541,7 @@ export default function Register(props) {
                   type="tel"
                   placeholder="mobile no."
                   required
-                  className="pl-4 bg-blue-100 lg:h-10  rounded h-8"
+                  className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                   value={patient.contactPerson.mobile}
                   onChange={(e) => {
                     let temppatient = { ...patient };
@@ -551,12 +551,12 @@ export default function Register(props) {
                 ></input>
               </div>
 
-              <div className="lg:grid grid-cols-4 gap-2 mt-4 mr-4">
-                <label className="  lg:text-xl font-bold px-4">Email</label>
+              <div className="grid-cols-4 gap-2 mt-4 mr-4 lg:grid">
+                <label className="px-4 font-bold lg:text-xl">Email</label>
                 <input
                   type="email"
                   id="email"
-                  className="bg-blue-100 lg:h-10 rounded pl-4 h-8"
+                  className="h-8 pl-4 bg-blue-100 rounded lg:h-10"
                   value={patient.contactPerson.email}
                   onChange={(e) => {
                     let temppatient = { ...patient };
@@ -567,11 +567,11 @@ export default function Register(props) {
               </div>
 
               <div className="mt-4">
-                <label className=" rounded p-2 lg:text-xl font-bold px-4">
+                <label className="p-2 px-4 font-bold rounded lg:text-xl">
                   Relation with patient
                 </label>
                 <input
-                  className="bg-blue-100 lg:h-10 ml-24 rounded pl-4 h-8 lg:mt-0 lg:ml-0 mt-2 "
+                  className="h-8 pl-4 mt-2 ml-24 bg-blue-100 rounded lg:h-10 lg:mt-0 lg:ml-0 "
                   placeholder="eg. father"
                   value={patient.contactPerson.relation}
                   onChange={(e) => {
@@ -583,13 +583,13 @@ export default function Register(props) {
               </div>
 
               <div className="grid grid-cols-4 gap-2 mt-4 mr-4 grid-flow-dense ">
-                <label className=" lg:text-xl font-bold px-4 mb-8 col-span-1">
+                <label className="col-span-1 px-4 mb-8 font-bold lg:text-xl">
                   Address
                 </label>
-                <div className="grid grid-cols-2 gap-8 col-span-3 ">
+                <div className="grid grid-cols-2 col-span-3 gap-8 ">
                   <input
                     type="text"
-                    className="bg-blue-100 h-10  rounded pl-4 "
+                    className="h-10 pl-4 bg-blue-100 rounded "
                     required
                     placeholder="building/area"
                     value={patient.contactPerson.address.building}
@@ -602,7 +602,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 h-10  rounded pl-4 "
+                    className="h-10 pl-4 bg-blue-100 rounded "
                     required
                     placeholder="village/city"
                     value={patient.contactPerson.address.city}
@@ -614,9 +614,9 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 h-10  rounded  pl-4"
+                    className="h-10 pl-4 bg-blue-100 rounded"
                     required
-                    placeholder="Taluka"
+                    placeholder="Taluk"
                     value={patient.contactPerson.address.taluka}
                     onChange={(e) => {
                       let temppatient = { ...patient };
@@ -626,7 +626,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 h-10  rounded  pl-4"
+                    className="h-10 pl-4 bg-blue-100 rounded"
                     required
                     placeholder="District"
                     value={patient.contactPerson.address.district}
@@ -639,7 +639,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="number"
-                    className="bg-blue-100 h-10  rounded  pl-4"
+                    className="h-10 pl-4 bg-blue-100 rounded"
                     required
                     placeholder="Pin-code"
                     value={patient.contactPerson.address.pincode}
@@ -652,7 +652,7 @@ export default function Register(props) {
                   ></input>
                   <input
                     type="text"
-                    className="bg-blue-100 h-10  rounded  pl-4"
+                    className="h-10 pl-4 bg-blue-100 rounded"
                     placeholder="State"
                     value={patient.contactPerson.address.state}
                     onChange={(e) => {
@@ -663,7 +663,7 @@ export default function Register(props) {
                   ></input>
                 </div>
               </div>
-              <div className="flex justify-center mb-4 mt-8">
+              <div className="flex justify-center mt-8 mb-4">
                 {Loading ? (
                   <ReactLoading
                     type={"bubbles"}
@@ -672,7 +672,7 @@ export default function Register(props) {
                     width={"5%"}
                   />
                 ) : (
-                  <button className="bg-primary rounded p-2 px-8 font-bold text-xl hover:bg-bgsecondary mb-4 ">
+                  <button className="p-2 px-8 mb-4 text-xl font-bold rounded bg-primary hover:bg-bgsecondary ">
                     Submit
                   </button>
                 )}
@@ -680,7 +680,7 @@ export default function Register(props) {
             </div>
           </form>
 
-          <div className="mt-auto relative bottom-0">
+          <div className="relative bottom-0 mt-auto">
             <Footer></Footer>
           </div>
         </div>

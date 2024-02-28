@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import profile from "../../assets/img/landingPage/profile.png";
+import profile1 from "../../assets/img/landingPage/doctor.png";
 import ReactLoading from "react-loading";
 export default function Login(props) {
   const navigate = useNavigate();
@@ -121,11 +122,11 @@ export default function Login(props) {
     }
   };
   return (
-    <div className="bg-white flex flex-col justify-items-center items-center py-4 px-4 rounded shadow-md lg:w-3/4 w-full my-7 ml-auto ">
-      <h1 className="text-3xl font-bold font-poppins text-primary py-5">
+    <div className="flex flex-col items-center w-full px-4 py-4 ml-auto bg-white rounded shadow-md justify-items-center lg:w-3/4 my-7 ">
+      <h1 className="py-5 text-3xl font-bold font-poppins text-primary">
         Login
       </h1>
-      <div className="flex bg-bgsecondary w-fit justify-between rounded">
+      <div className="flex justify-between rounded bg-bgsecondary w-fit">
         <button
           className={
             Toggle === "Patient"
@@ -183,7 +184,7 @@ export default function Login(props) {
       <form className="flex flex-col w-full px-8" onSubmit={handleLogin}>
         <label
           htmlFor="email"
-          className="font-poppins pt-2 pb-1 text-lg font-bold"
+          className="pt-2 pb-1 text-lg font-bold font-poppins"
         >
           {Toggle === "Patient" ? "Health Id" : "Email"}
         </label>
@@ -191,7 +192,7 @@ export default function Login(props) {
           type="text"
           name="username"
           id="username"
-          className="font-poppins px-3 py-2 bg-bgsecondary rounded outline-none"
+          className="px-3 py-2 rounded outline-none font-poppins bg-bgsecondary"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -199,7 +200,7 @@ export default function Login(props) {
         <span className="text-sm text-red-500">{usernameError}</span>
         <label
           htmlFor="password"
-          className="font-poppins pt-6 pb-1 text-lg font-bold"
+          className="pt-6 pb-1 text-lg font-bold font-poppins"
         >
           Password
         </label>
@@ -207,7 +208,7 @@ export default function Login(props) {
           type="password"
           name="password"
           id="password"
-          className="font-poppins px-3 py-2 bg-bgsecondary rounded outline-none"
+          className="px-3 py-2 rounded outline-none font-poppins bg-bgsecondary"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -215,7 +216,7 @@ export default function Login(props) {
         <span className="text-sm text-red-500">{passwordError}</span>
 
         {Loading ? (
-          <div className="flex justify-center items-center py-3">
+          <div className="flex items-center justify-center py-3">
             <ReactLoading
               type={"bubbles"}
               color={"color"}
@@ -226,13 +227,13 @@ export default function Login(props) {
         ) : (
           <button
             type="submit"
-            className="text-lg mt-10  bg-primary py-1 px-3 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary"
+            className="px-3 py-1 mt-10 text-lg font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-bgsecondary"
           >
             Login
           </button>
         )}
       </form>
-      <h1 className="font-poppins text-base pt-5">
+      <h1 className="pt-5 text-base font-poppins">
         New User, <Link to="/Register">Register here</Link>
       </h1>
     </div>

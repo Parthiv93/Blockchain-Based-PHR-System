@@ -345,7 +345,7 @@ export default function Register(props) {
                     type="text"
                     className="bg-blue-100 lg:h-10  rounded  pl-4 h-8"
                     required
-                    placeholder="Taluka"
+                    placeholder="Taluk"
                     value={patient.address.taluka}
                     onChange={(e) => {
                       let temppatient = { ...patient };
@@ -612,7 +612,7 @@ export default function Register(props) {
                     type="text"
                     className="bg-blue-100 h-10  rounded  pl-4"
                     required
-                    placeholder="Taluka"
+                    placeholder="Taluk"
                     value={patient.contactPerson.address.taluka}
                     onChange={(e) => {
                       let temppatient = { ...patient };

@@ -22,15 +22,15 @@ const AdminSidebar = (props) => {
   const [Toggle, setToggle] = useState("Dashboard");
 
   return (
-    <div className="h-screen overflow-y-hidden w-screen grid grid-cols-12">
-      <div className="side_bar bg-white shadow col-span-2">
-        <div className="flex m-2 mt-4  ">
-          <div className="logo m-2  ">
-            <img src={logo} className="w-16" alt="logo"></img>
+    <div className="grid w-screen h-screen grid-cols-12 overflow-y-hidden">
+      <div className="col-span-2 bg-white shadow side_bar">
+        <div className="flex m-2 mt-4 ">
+          <div className="pl-2 pr-5 mt-2 h-11 lg:h-10 lg:pr-3 filter grayscale">
+          <img src={logo} className="w-10" style={{ marginTop: '-15px' }} alt="logo" />
           </div>
-          <div className="heading font-poppins font-bold text-xl  ">
+          <div className="text-xl font-bold heading font-poppins ">
             <Link to="/">
-              <h1>CareCryption</h1>
+              <h1>Care Cryption</h1>
             </Link>
           </div>
         </div>
@@ -43,10 +43,10 @@ const AdminSidebar = (props) => {
             }
           >
             <div className="flex m-2 mt-8 ">
-              <div className="w-6 ml-4  ">
+              <div className="w-6 ml-4 ">
                 <img src={dashboard} alt="dashboard"></img>
               </div>
-              <div className="font-poppins font-bold ml-4">
+              <div className="ml-4 font-bold font-poppins">
                 <h1>Dashboard</h1>
               </div>
             </div>
@@ -58,18 +58,18 @@ const AdminSidebar = (props) => {
             className={Toggle === "Reports" ? "text-gray-900" : "text-gray-400"}
           >
             <div className="flex m-2 mt-4 ">
-              <div className="w-6 ml-4  ">
+              <div className="w-6 ml-4 ">
                 <img src={add_doctor} alt="add-doctor"></img>
               </div>
-              <div className="font-poppins font-bold ml-4">
+              <div className="ml-4 font-bold font-poppins">
                 <h1>Add a Doctor</h1>
               </div>
             </div>
           </Link>
 
           <div className="p-4">
-            <h1 className="font-poppins font-bold text-xl mt-4">Main menu</h1>
-            <div className="grid grid-rows-2  font-bold font-poppins mt-4">
+            <h1 className="mt-4 text-xl font-bold font-poppins">Main menu</h1>
+            <div className="grid grid-rows-2 mt-4 font-bold font-poppins">
               <Link
                 to="/admin/patientslist"
                 onClick={() => setToggle("Patient_history")}
@@ -79,11 +79,11 @@ const AdminSidebar = (props) => {
                     : "text-gray-400"
                 }
               >
-                <div className="flex m-2 mt-2  ">
-                  <div className="w-6 ml-4  ">
+                <div className="flex m-2 mt-2 ">
+                  <div className="w-6 ml-4 ">
                     <img src={patient_list} alt="patient-list"></img>
                   </div>
-                  <div className="font-poppins font-bold ml-4">
+                  <div className="ml-4 font-bold font-poppins">
                     <h1>Patient List</h1>
                   </div>
                 </div>
@@ -98,10 +98,10 @@ const AdminSidebar = (props) => {
                 }
               >
                 <div className="flex m-2 mt-2 ">
-                  <div className="w-6 ml-4  ">
+                  <div className="w-6 ml-4 ">
                     <img src={doctor_list} alt="doctor-list"></img>
                   </div>
-                  <div className="font-poppins font-bold ml-4">
+                  <div className="ml-4 font-bold font-poppins">
                     <h1>Doctor List</h1>
                   </div>
                 </div>
@@ -110,8 +110,8 @@ const AdminSidebar = (props) => {
           </div>
         </nav>
 
-        <div className=" mx-auto mt-56 py-1    bg-primary  rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary w-2/5  ">
-          <button className="font-bold  flex items-center" onClick={logout}>
+        <div className="w-2/5 py-1 mx-auto mt-56 font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-bgsecondary">
+          <button className="flex items-center font-bold" onClick={logout}>
             <img src={logoutimg} className="h-4 px-2 " alt="logout"></img>
             logout
           </button>

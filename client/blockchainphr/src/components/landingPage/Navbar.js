@@ -11,9 +11,9 @@ export default function Navbar() {
 <img
   src={logo}
   alt="logo"
-  className="h-10 pl-2 pr-5 mt-2 lg:h-10 lg:pr-3 filter grayscale"
+  className="pl-2 pr-5 mt-11 h-11 lg:h-10 lg:pr-3 filter grayscale"
 />
-      <h1 className="custom-text">
+      <h1 className="h-5 text-xl font-bold custom-text font-poppins">
         <Link to="/">CareCryption</Link>
       </h1>
       <ul className="flex ml-auto font-semibold w-69 lg:w-90 justify-evenly font-lato custom-link">

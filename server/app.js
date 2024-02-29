@@ -29,11 +29,7 @@ mongoose
   })
   .catch((err) => {
     app.listen(port);
-    app.get("/", (req, res) => {
-      res.send(
-        "Something Went Wrong! Please Try again after some time, if problem persists please contact us."
-      );
-    });
+    console.log(err);
   });
 
 app.get("/", (req, res) => {

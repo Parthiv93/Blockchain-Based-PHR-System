@@ -27,39 +27,39 @@ const Contact = (props) => {
   };
 
   return (
-    <div className="body w-full ">
+    <div className="w-full body ">
       <Navbar></Navbar>
 
       <div className="bg-secoundry ">
         <div className="">
           <div>
             <div className="flex justify-center mt-4">
-              <h1 className=" rounded p-4 px-8 font-bold font-poppins text-3xl">
+              <h1 className="p-4 px-8 text-3xl font-bold rounded  font-poppins">
                 Contact us
               </h1>
             </div>
           </div>
         </div>
 
-        <div className="lg:grid lg:grid-cols-2 mt-4 ">
+        <div className="mt-4 lg:grid lg:grid-cols-2 ">
           <div>
-            <div className="max-w-full  lg:mx-32 mx-4 my-8 bg-white py-8 px-16 rounded-3xl  border-8 border-primary">
+            <div className="max-w-full px-16 py-8 mx-4 my-8 bg-white border-8 lg:mx-32 rounded-3xl border-primary">
               <div className="flex justify-center">
-                <h1 className=" rounded  px-4 font-bold font-poppins text-3xl">
+                <h1 className="px-4 text-3xl font-bold rounded  font-poppins">
                   Reach us
                 </h1>
               </div>
               <div className="">
-                <h1 className="font-bold font-poppins text-2xl mt-4 ">
+                <h1 className="mt-4 text-2xl font-bold font-poppins ">
                   Email :
                 </h1>
-                <h1 className="font-poppins text-xl">projectk324@gmail.com</h1>
+                <h1 className="text-xl font-poppins">projectk324@gmail.com</h1>
               </div>
               <div>
-                <h1 className="font-bold font-poppins text-2xl mt-4 ">
+                <h1 className="mt-4 text-2xl font-bold font-poppins ">
                   Address :
                 </h1>
-                <h2 className="font-poppins text-xl">
+                <h2 className="text-xl font-poppins">
                   Ernakulam{" "}
                 </h2>
               </div>
@@ -67,10 +67,10 @@ const Contact = (props) => {
           </div>
 
           <div>
-            <div className="bg-white p-10 rounded shadow-lg lg:mr-12 mt-12 mb-8 m-4">
-              <form className="grid  gap-8 " ref={form} onSubmit={sendEmail}>
-                <div className="grid grid-cols-4  ">
-                  <label className="font-poppins font-bold lg:text-xl col-span-1">
+            <div className="p-10 m-4 mt-12 mb-8 bg-white rounded shadow-lg lg:mr-12">
+              <form className="grid gap-8 " ref={form} onSubmit={sendEmail}>
+                <div className="grid grid-cols-4 ">
+                  <label className="col-span-1 font-bold font-poppins lg:text-xl">
                     Name
                   </label>
                   <input
@@ -78,11 +78,11 @@ const Contact = (props) => {
                     placeholder="name"
                     id="name"
                     name="name"
-                    className="pl-8 py-2 bg-blue-100  rounded col-span-3 text-lg outline-none"
+                    className="col-span-3 py-2 pl-8 text-lg bg-blue-100 rounded outline-none"
                   ></input>
                 </div>
                 <div className="grid grid-cols-4">
-                  <label className="font-poppins font-bold lg:text-xl col-span-1">
+                  <label className="col-span-1 font-bold font-poppins lg:text-xl">
                     Email
                   </label>
                   <input
@@ -90,11 +90,11 @@ const Contact = (props) => {
                     placeholder="email"
                     id="email"
                     name="email"
-                    className="pl-8 py-2 bg-blue-100  rounded col-span-3  text-lg outline-none"
+                    className="col-span-3 py-2 pl-8 text-lg bg-blue-100 rounded outline-none"
                   ></input>
                 </div>
                 <div className="grid grid-cols-4">
-                  <label className="font-poppins font-bold lg:text-xl col-span-1">
+                  <label className="col-span-1 font-bold font-poppins lg:text-xl">
                     Message{" "}
                   </label>
                   <textarea
@@ -102,7 +102,7 @@ const Contact = (props) => {
                     rows="4"
                     cols="25"
                     name="message"
-                    className="pl-4 bg-blue-100  rounded  col-span-3 text-lg py-2 outline-none"
+                    className="col-span-3 py-2 pl-4 text-lg bg-blue-100 rounded outline-none"
                   ></textarea>
                 </div>
                 <div className="flex justify-center ">
@@ -114,7 +114,7 @@ const Contact = (props) => {
                       width={"9%"}
                     />
                   ) : (
-                    <button className="text-lg mt-2 bg-primary py-1 px-3 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary">
+                    <button className="px-3 py-1 mt-2 text-lg font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-green-500">
                       Submit
                     </button>
                   )}
@@ -123,7 +123,7 @@ const Contact = (props) => {
             </div>
           </div>
         </div>
-        <div className="mt-auto relative bottom-0">
+        <div className="relative bottom-0 mt-auto">
           <Footer></Footer>
         </div>
       </div>

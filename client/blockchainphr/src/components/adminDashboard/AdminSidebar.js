@@ -23,10 +23,10 @@ const AdminSidebar = (props) => {
 
   return (
     <div className="grid w-screen h-screen grid-cols-12 overflow-y-hidden">
-      <div className="col-span-2 bg-white shadow side_bar">
+      <div className="col-span-2 shadow bg-green-50 side_bar">
         <div className="flex m-2 mt-4 ">
           <div className="pl-2 pr-5 mt-2 h-11 lg:h-10 lg:pr-3 filter grayscale">
-          <img src={logo} className="w-10" style={{ marginTop: '-15px' }} alt="logo" />
+          <img src={logo} className="w-[50px]" style={{ marginTop: '-15px' }} alt="logo" />
           </div>
           <div className="text-xl font-bold heading font-poppins ">
             <Link to="/">
@@ -110,10 +110,10 @@ const AdminSidebar = (props) => {
           </div>
         </nav>
 
-        <div className="w-2/5 py-1 mx-auto mt-56 font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-bgsecondary">
+        <div className="w-2/5 py-1 mx-auto mt-56 font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-green-500">
           <button className="flex items-center font-bold" onClick={logout}>
             <img src={logoutimg} className="h-4 px-2 " alt="logout"></img>
-            logout
+            Log out
           </button>
         </div>
       </div>

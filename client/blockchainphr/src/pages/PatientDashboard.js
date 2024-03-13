@@ -82,35 +82,35 @@ const PatientDashboard = (props) => {
   }, [dob]);
 
   return (
-    <div className="full-body col-span-10 h-screen">
+    <div className="h-screen col-span-10 full-body">
       <div className="body-without-footer max-h-min bg-bgprimary ">
-        <div className=" main ">
+        <div className=" main">
           <div className="">
-            <div className="flex  h-12 m-2 bg-bgprimary rounded mt-4  ">
+            <div className="flex h-12 m-2 mt-4 rounded bg-bgprimary ">
               <div>
-                <h1 className="text-2xl font-poppins font-bold p-2 ">
+                <h1 className="p-2 text-2xl font-bold font-poppins ">
                   DashBoard Today
                 </h1>
               </div>
 
-              <div className="flex ml-20  h-10   ">
+              <div className="flex h-10 ml-20 ">
                 <input
                   placeholder="Search"
-                  className="w-96 rounded ml-4 text-xl   pl-4 border focus:outline-none "
+                  className="pl-4 ml-4 text-xl border rounded w-96 focus:outline-none "
                 ></input>
-                <div className="bg-white pl-2 rounded ">
-                  <img src={search} className=" h-6 mt-2  " alt="search"></img>
+                <div className="pl-2 bg-white rounded ">
+                  <img src={search} className="h-6 mt-2 " alt="search"></img>
                 </div>
               </div>
 
               <Link to="/patient/profile">
-                <button className="flex bg-white rounded shadow  px-4  ml-60 h-14 ">
+                <button className="flex px-4 bg-white rounded shadow ml-60 h-14 ">
                   <img
                     src={patient_profile}
-                    className="h-14 p-1 rounded-2xl"
+                    className="p-1 h-14 rounded-2xl"
                     alt="profile"
                   ></img>
-                  <div className="mt-4 ml-4  font-bold font-poppins">
+                  <div className="mt-4 ml-4 font-bold font-poppins">
                     <h1>{`${patient.name.firstName}  ${patient.name.surName}`}</h1>
                   </div>
                 </button>
@@ -119,18 +119,18 @@ const PatientDashboard = (props) => {
           </div>
 
           <div className="grid grid-cols-2">
-            <div className="m-4 p-4">
+            <div className="p-4 m-4">
               <div>
-                <h1 className="font-bold font-poppins text-xl ">
+                <h1 className="text-xl font-bold font-poppins ">
                   Patient Details
                 </h1>
               </div>
-              <div className="bg-white font-poppins p-4 mt-4 px-8 rounded-xl shadow">
+              <div className="p-4 px-8 mt-4 bg-white shadow font-poppins rounded-xl">
                 <div className="flex">
                   <div>
                     <h1>Name : </h1>
                   </div>
-                  <div className="flex ml-2   ">
+                  <div className="flex ml-2 ">
                     <h1 className="pl-1">{patient.name.firstName}</h1>
                     <h1 className="pl-1">{patient.name.middleName}</h1>
                     <h1 className="pl-1">{patient.name.surName}</h1>
@@ -153,20 +153,20 @@ const PatientDashboard = (props) => {
                   </div>
                 </div>
                 <div>
-                  <h1 className="font-bold mt-4">Past Health History</h1>
+                  <h1 className="mt-4 font-bold">Past Health History</h1>
                   <div>{`${patient.diseases[0].disease} (${patient.diseases[0].yrs} yrs.)`}</div>
                 </div>
               </div>
             </div>
             {/* recent health check up start */}
-            <div className="m-4 p-4 ">
+            <div className="p-4 m-4 ">
               <div>
-                <h1 className="font-bold font-poppins text-xl ">
+                <h1 className="text-xl font-bold font-poppins ">
                   Recent Health Checkup
                 </h1>
               </div>
               {prescriptions.length > 0 ? (
-                <div className="bg-white mt-4 font-poppins p-4 rounded-xl shadow px-8">
+                <div className="p-4 px-8 mt-4 bg-white shadow font-poppins rounded-xl">
                   <div className="flex ">
                     <div>
                       <h1>Consultant Doctor :</h1>
@@ -197,17 +197,17 @@ const PatientDashboard = (props) => {
                       props.setPrescriptionID(prescriptions[0]._id);
                     }}
                   >
-                    <div className=" mt-2 flex items-center justify-evenly text-base bg-primary py-1 px-2 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary w-5/12  ">
+                    <div className="flex items-center w-5/12 px-2 py-1 mt-2 text-base font-semibold rounded shadow-sm justify-evenly bg-primary font-poppins hover:bg-bgsecondary">
                       <img src={reports} className="h-4" alt="report"></img>
 
-                      <button className=" font-semibold pl-1">
+                      <button className="pl-1 font-semibold ">
                         Preview Prescription
                       </button>
                     </div>
                   </Link>
                 </div>
               ) : (
-                <div className="bg-white mt-4 font-poppins p-4 rounded-xl shadow px-8 flex justify-center font-bold">
+                <div className="flex justify-center p-4 px-8 mt-4 font-bold bg-white shadow font-poppins rounded-xl">
                   {" "}
                   No Data Found...{" "}
                 </div>
@@ -217,15 +217,15 @@ const PatientDashboard = (props) => {
             <div></div>
           </div>
 
-          <div className="font-poppins m-4  ">
+          <div className="m-4 font-poppins ">
             <div className="flex justify-between m-8">
-              <div className="font-bold text-xl ml-4">
+              <div className="ml-4 text-xl font-bold">
                 <h1>Patient Dashboard</h1>
               </div>
             </div>
-            <div className="bg-white m-4 rounded-lg ">
-              <div className="grid grid-rows-2 p-6 gap-2 shadow">
-                <div className="grid grid-cols-4 font-bold  ">
+            <div className="m-4 bg-white rounded-lg ">
+              <div className="grid grid-rows-2 gap-2 p-6 shadow">
+                <div className="grid grid-cols-4 font-bold ">
                   <div>
                     <h1>Date</h1>
                   </div>
@@ -264,13 +264,13 @@ const PatientDashboard = (props) => {
                             props.setPrescriptionID(prescription._id)
                           }
                         >
-                          <div className=" flex  justify-center bg-primary py-1 px-3 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary w-2/5   ">
+                          <div className="flex justify-center w-2/5 px-3 py-1 font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-bgsecondary">
                             <img
                               src={eye}
                               className="h-4 my-auto"
                               alt="preview"
                             ></img>
-                            <button className="font-bold ml-2">Preview </button>
+                            <button className="ml-2 font-bold">Preview </button>
                           </div>
                         </Link>
                       </div>

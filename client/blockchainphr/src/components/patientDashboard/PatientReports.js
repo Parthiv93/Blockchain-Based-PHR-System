@@ -78,18 +78,18 @@ const PatientReports = (props) => {
   }, [dob]);
   return (
     <div className="col-span-10">
-      <div className=" px-12">
+      <div className="px-12 ">
         <div className="h-screen">
-          <div className="font-poppins   mainf">
+          <div className="font-poppins mainf">
             <Link to="/patient/profile">
-              <div className="flex bg-white rounded shadow  px-4   ml-auto h-14 w-1/5 mr-8 mt-8">
+              <div className="flex w-1/5 px-4 mt-8 ml-auto mr-8 bg-white rounded shadow h-14">
                 <img
                   src={patient_profile}
                   className="w-12 p-1 rounded-2xl"
                   alt="profile"
                 ></img>
-                <div className="grid grid-rows-2 ml-4 gap-2  mb-4">
-                  <div className="mt-4 ml-4  font-bold font-poppins">
+                <div className="grid grid-rows-1 gap-2 mb-3">
+                  <div className="mt-4 ml-4 font-bold font-poppins">
                     <h1 className="ml-2">
                       {`${patient.name.firstName} ${patient.name.surName}`}
                     </h1>
@@ -98,12 +98,12 @@ const PatientReports = (props) => {
               </div>
             </Link>
             <div className="flex justify-between m-8">
-              <div className="font-bold text-xl ml-4">
+              <div className="ml-4 text-xl font-bold">
                 <h1>Patient Reports</h1>
               </div>
             </div>
-            <div className="bg-white m-4 rounded-lg ">
-              <div className="grid grid-rows-2 p-6 gap-2 shadow">
+            <div className="m-4 bg-white rounded-lg ">
+              <div className="grid grid-rows-2 gap-2 p-6 shadow">
                 <div className="grid grid-cols-4 font-bold ">
                   <div>
                     <h1>Date</h1>
@@ -132,7 +132,7 @@ const PatientReports = (props) => {
                     );
                   })
                 ) : (
-                  <div className="font-bold mt-3 mx-auto">
+                  <div className="mx-auto mt-3 font-bold">
                     No Record Found...
                   </div>
                 )}
@@ -142,7 +142,7 @@ const PatientReports = (props) => {
         </div>
       </div>
 
-      <div className="-mt-20 mb-0">
+      <div className="mb-0 -mt-20">
         <Footer></Footer>
       </div>
     </div>

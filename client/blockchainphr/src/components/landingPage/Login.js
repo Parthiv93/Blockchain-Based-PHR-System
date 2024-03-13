@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import profile from "../../assets/img/landingPage/profile.png";
 import profile1 from "../../assets/img/landingPage/doctor.png";
+import profile2 from "../../assets/img/landingPage/admin-1.png";
 import ReactLoading from "react-loading";
 export default function Login(props) {
   const navigate = useNavigate();
@@ -171,16 +172,17 @@ export default function Login(props) {
             Toggle === "Admin"
               ? "py-2 px-8 text-lg font-poppins font-semibold cursor-pointer rounded bg-primary"
               : "py-2 px-8 text-lg font-poppins font-medium text-primary cursor-pointer rounded"
+              
           }
         >
           Admin
         </button>
       </div>
       <img
-        src={profile}
-        alt="profile pic"
-        className="h-20 my-6 border-2 rounded-full"
-      />
+      src={Toggle === "Patient" ? profile : Toggle === "Doctor" ? profile1 : "admin" ? profile2 : ""}
+      alt="profile pic"
+      className="h-20 my-6 border-2 rounded-full"
+    />
       <form className="flex flex-col w-full px-8" onSubmit={handleLogin}>
         <label
           htmlFor="email"
@@ -227,7 +229,7 @@ export default function Login(props) {
         ) : (
           <button
             type="submit"
-            className="px-3 py-1 mt-10 text-lg font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-bgsecondary"
+            className="px-3 py-1 mt-10 text-lg font-semibold rounded shadow-sm bg-primary font-poppins hover:bg-green-500"
           >
             Login
           </button>

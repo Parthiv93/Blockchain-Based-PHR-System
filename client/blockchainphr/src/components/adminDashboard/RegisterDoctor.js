@@ -248,7 +248,7 @@ export default function Register(props) {
               <label class="  text-base font-bold px-4">Blood Group</label>
               <div className="">
                 <select
-                  className="pl-4 w-1/2 bg-blue-100 h-10  rounded "
+                  className="w-1/2 h-10 pl-4 bg-blue-100 rounded "
                   id="blood-group"
                   value={doctor.bloodGroup}
                   onChange={(e) => {
@@ -274,7 +274,7 @@ export default function Register(props) {
               <label class=" text-base font-bold px-4 mb-8 col-span-1">
                 Address
               </label>
-              <div className="grid grid-cols-2 gap-4 col-span-3 ">
+              <div className="grid grid-cols-2 col-span-3 gap-4 ">
                 <input
                   type="text"
                   class="bg-blue-100 h-10  rounded pl-4  "
@@ -303,7 +303,7 @@ export default function Register(props) {
                   type="text"
                   class="bg-blue-100 h-10  rounded pl-4"
                   required
-                  placeholder="Taluka"
+                  placeholder="Taluk"
                   value={doctor.address.taluka}
                   onChange={(e) => {
                     let tempdoctor = { ...doctor };
@@ -325,7 +325,7 @@ export default function Register(props) {
                 ></input>
                 <input
                   type="number"
-                  className="bg-blue-100 h-10  rounded  pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   required
                   placeholder="Pin-code"
                   value={doctor.address.pincode}
@@ -337,7 +337,7 @@ export default function Register(props) {
                 ></input>
                 <input
                   type="text"
-                  className="bg-blue-100 h-10  rounded  pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   placeholder="State"
                   value={doctor.address.state}
                   onChange={(e) => {
@@ -353,9 +353,9 @@ export default function Register(props) {
               <label class=" text-base font-bold px-4 grid col-start-1 col-span-1">
                 Education
               </label>
-              <div className=" ">
+              <div className="">
                 {EducationList.map((Education, index) => (
-                  <div className=" flex " key={index} id="degree">
+                  <div className="flex " key={index} id="degree">
                     <input
                       class="bg-blue-100 h-10  rounded mb-8 pl-4 grid col-start-2 col-span-1  "
                       placeholder="eg. MBBS"
@@ -372,10 +372,10 @@ export default function Register(props) {
                       }}
                     ></input>
 
-                    <div className="flex  ml-4">
+                    <div className="flex ml-4">
                       {index === 0 ? (
                         <div
-                          className=" m-2 h-10 w-16 mt-0 ml-4  font-poppins font-semibold cursor-pointer "
+                          className="w-16 h-10 m-2 mt-0 ml-4 font-semibold cursor-pointer font-poppins"
                           onClick={handelEducationAdd}
                         >
                           <img
@@ -389,7 +389,7 @@ export default function Register(props) {
                       )}
 
                       <div
-                        className=" m-2 h-10 w-20 mt-0   font-poppins font-semibold cursor-pointer "
+                        className="w-20 h-10 m-2 mt-0 font-semibold cursor-pointer font-poppins"
                         onClick={() => {
                           if (EducationList.length > 1) {
                             let EducationList1 = [...EducationList];
@@ -416,11 +416,11 @@ export default function Register(props) {
               <label class=" text-base font-bold px-4 grid col-start-1 col-span-1">
                 Specility
               </label>
-              <div className=" ">
+              <div className="">
                 {SpecialityList.map((Special, index) => (
-                  <div className=" flex " key={index} id="speciality">
+                  <div className="flex " key={index} id="speciality">
                     <input
-                      className="bg-blue-100 h-10  rounded mb-8 pl-4 grid col-start-3 col-span-1"
+                      className="grid h-10 col-span-1 col-start-3 pl-4 mb-8 bg-blue-100 rounded"
                       placeholder="Speciality"
                       id="speciality"
                       name="speciality"
@@ -435,10 +435,10 @@ export default function Register(props) {
                       }}
                     ></input>
 
-                    <div className="flex  ml-4">
+                    <div className="flex ml-4">
                       {index === 0 ? (
                         <div
-                          className=" m-2 h-10 w-16 mt-0 ml-4  font-poppins font-semibold cursor-pointer "
+                          className="w-16 h-10 m-2 mt-0 ml-4 font-semibold cursor-pointer font-poppins"
                           onClick={handelSpecialityAdd}
                         >
                           <img
@@ -452,7 +452,7 @@ export default function Register(props) {
                       )}
 
                       <div
-                        className=" m-2 h-10 w-20 mt-0   font-poppins font-semibold cursor-pointer "
+                        className="w-20 h-10 m-2 mt-0 font-semibold cursor-pointer font-poppins"
                         onClick={() => {
                           if (SpecialityList.length > 1) {
                             let SpecialityList1 = [...SpecialityList];
@@ -496,7 +496,7 @@ export default function Register(props) {
               <label class=" text-base font-bold px-4 mb-8 col-span-1">
                 Hospital Address
               </label>
-              <div className="grid grid-cols-2 gap-4 col-span-3 ">
+              <div className="grid grid-cols-2 col-span-3 gap-4 ">
                 <input
                   type="text"
                   class="bg-blue-100 h-10  rounded pl-4 "
@@ -525,7 +525,7 @@ export default function Register(props) {
                   type="text"
                   class="bg-blue-100 h-10  rounded pl-4"
                   required
-                  placeholder="Taluka"
+                  placeholder="Taluk"
                   value={doctor.orgAddress.taluka}
                   onChange={(e) => {
                     let tempdoctor = { ...doctor };
@@ -547,7 +547,7 @@ export default function Register(props) {
                 ></input>
                 <input
                   type="number"
-                  className="bg-blue-100 h-10  rounded  pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   required
                   placeholder="Pin-code"
                   value={doctor.orgAddress.pincode}
@@ -559,7 +559,7 @@ export default function Register(props) {
                 ></input>
                 <input
                   type="text"
-                  className="bg-blue-100 h-10  rounded  pl-4"
+                  className="h-10 pl-4 bg-blue-100 rounded"
                   placeholder="State"
                   value={doctor.orgAddress.state}
                   onChange={(e) => {
@@ -621,7 +621,7 @@ export default function Register(props) {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               ></input>
-              <span className="text-sm py-1 text-red-500">{passwordError}</span>
+              <span className="py-1 text-sm text-red-500">{passwordError}</span>
             </div>
 
             <div class="flex justify-center mb-4 mt-8">
@@ -633,14 +633,14 @@ export default function Register(props) {
                   width={"5%"}
                 />
               ) : (
-                <button className="bg-primary rounded p-2 px-8 font-bold text-xl hover:bg-bgsecondary mb-4 ">
+                <button className="p-2 px-8 mb-4 text-xl font-bold rounded bg-primary hover:bg-green-500">
                   Submit
                 </button>
               )}
             </div>
           </form>
 
-          <div className="mt-auto relative bottom-0">
+          <div className="relative bottom-0 mt-auto">
             <Footer></Footer>
           </div>
         </div>
@@ -648,3 +648,4 @@ export default function Register(props) {
     </div>
   );
 }
+

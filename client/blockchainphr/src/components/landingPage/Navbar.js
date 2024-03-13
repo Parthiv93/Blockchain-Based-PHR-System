@@ -28,7 +28,7 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <button className="px-2 py-1 mr-2 font-semibold rounded shadow-sm bg-primary lg:py-2 lg:px-3 font-poppins hover:bg-bgsecondary">
+      <button className="px-2 py-1 mr-2 font-semibold rounded shadow-sm bg-primary lg:py-2 lg:px-3 font-poppins hover:bg-green-500">
         {location.pathname === "/register" ? (
           <Link to="/">Login</Link>
         ) : (

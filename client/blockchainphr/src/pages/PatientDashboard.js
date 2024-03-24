@@ -288,7 +288,10 @@ const PatientDashboard = (props) => {
         <Footer></Footer>
       </div>
     </div>
+    
   );
+  
 };
+
 
 export default PatientDashboard;

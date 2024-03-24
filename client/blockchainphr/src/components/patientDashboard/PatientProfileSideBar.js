@@ -3,6 +3,8 @@ import dashboard from "../../assets/img/dashboard/dashboard.jpeg";
 import reports from "../../assets/img/dashboard/report2_pbl.png";
 import patient_history from "../../assets/img/dashboard/patient_history.jpeg";
 import patient_profile from "../../assets/img/dashboard/patient2_pbl.png";
+import doctor2 from "../../assets/img/dashboard/doctor2.png";
+import insurance from "../../assets/img/dashboard/insurance.png"; 
 import logoutimg from "../../assets/img/dashboard/logout.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -65,8 +67,26 @@ const PatientProfileSideBar = (props) => {
           </Link>
 
           <div className="p-4">
-            <h1 className="mt-4 text-xl font-bold font-poppins">Main menu</h1>
+            <h1 className="mt-4 text-xl font-bold font-poppins">Health Records</h1>
             <div className="grid grid-rows-2 gap-4 mt-4 font-bold font-poppins">
+            <Link
+            to="/patient/insurance"
+            onClick={() => setToggle("Insurance")}
+            className={
+              Toggle === "Insurance"
+                ? "text-gray-900"
+                : "text-gray-400"
+            }
+          >
+            <div className="flex p-2">
+            <img
+              src={insurance}
+              className="w-6"
+              alt="profile"
+            ></img>
+            <h1 className="ml-4">Insurance </h1>
+            </div>
+            </Link>
               <Link
                 to="/patient/history"
                 onClick={() => setToggle("Patient_history")}
@@ -102,6 +122,24 @@ const PatientProfileSideBar = (props) => {
                   ></img>
                   <h1 className="ml-4">Patient Profile</h1>
                 </div>
+              </Link>
+              <Link
+              to="/patient/doctor"
+              onClick={() => setToggle("Available_doctor")}
+              className={
+                Toggle === "Available_doctor"
+                  ? "text-gray-900"
+                  : "text-gray-400"
+              }
+            >
+              <div className="flex p-2">
+              <img
+                src={doctor2}
+                className="w-6"
+                alt="profile"
+              ></img>
+              <h1 className="ml-4">Available Doctors </h1>
+              </div>
               </Link>
             </div>
           </div>

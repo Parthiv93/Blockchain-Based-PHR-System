@@ -79,52 +79,52 @@ const PatientProfile = (props) => {
   };
 
   return (
-    <body className="font-poppins col-span-10 h-screen overflow-y-scroll ">
+    <body className="h-screen col-span-10 overflow-y-scroll font-poppins ">
       <div className="grid grid-cols-2 mt-16">
-        <div className="p-4 m-8 bg-white shadow-md w-2/3 mx-auto rounded-md  ">
+        <div className="w-2/3 p-4 m-8 mx-auto bg-white rounded-md shadow-md ">
           <div className="flex justify-center">
             <img
               src={patient_card_profile}
-              className="h-40 w-40 rounded-full border-2  p-4 "
+              className="w-40 h-40 p-4 border-2 rounded-full "
               alt="patient-profile"
             />
           </div>
           <div className="mt-6">
             <div className="flex ml-8 ">
-              <img src={name} className="h-8 w-8  " />
+              <img src={name} className="w-8 h-8 " />
               <div className="flex mt-1">
                 <h2 className="ml-2">{patient.name.firstName}</h2>
                 <h2 className="ml-2">{patient.name.middleName}</h2>
                 <h2 className="ml-2">{patient.name.surName}</h2>
               </div>
             </div>
-            <div className="flex ml-8 mt-4">
-              <img src={birth} className="h-5 w-5 ml-1" />
+            <div className="flex mt-4 ml-8">
+              <img src={birth} className="w-5 h-5 ml-1" />
               <h2 className="ml-4">{convertDatetoString(patient.dob)}</h2>
             </div>
-            <div className="flex ml-8 mt-4">
-              <img src={blood} className="h-6 w-6" />
+            <div className="flex mt-4 ml-8">
+              <img src={blood} className="w-6 h-6" />
               <h2 className="ml-4">{patient.bloodGroup}</h2>
             </div>
-            <div className="flex ml-8 mt-4">
-              <img src={phone} className="h-6 w-6 " />
+            <div className="flex mt-4 ml-8">
+              <img src={phone} className="w-6 h-6 " />
               <h2 className="ml-4">+91</h2>
               <h2 className="ml-2">{patient.mobile}</h2>
             </div>
-            <div className="flex ml-8 mt-4">
-              <img src={mail} className="h-6 w-5 " />
+            <div className="flex mt-4 ml-8">
+              <img src={mail} className="w-5 h-6 " />
               <h2 className="ml-4 ">{patient.email}</h2>
             </div>
-            <div className="flex ml-8 mt-4">
-              <img src={healthid} className="h-6 w-5 " />
+            <div className="flex mt-4 ml-8">
+              <img src={healthid} className="w-5 h-6 " />
               <h2 className="ml-4">{patient.healthID}</h2>
             </div>
           </div>
         </div>
         <div className="my-2">
-          <div className="p-8 m-2 bg-white shadow-md w-2/3 rounded-md">
+          <div className="w-2/3 p-8 m-2 bg-white rounded-md shadow-md">
             <div className="flex mt-3">
-              <img src={address} className="h-7 w-8" />
+              <img src={address} className="w-8 h-7" />
               <div className="ml-4">
                 <h2>
                   {" "}
@@ -133,12 +133,12 @@ const PatientProfile = (props) => {
               </div>
             </div>
           </div>
-          <div className="p-8 m-2 bg-white shadow-md w-2/3 rounded-md mt-10">
-            <h1 className="font-bold flex justify-center text-xl">
+          <div className="w-2/3 p-8 m-2 mt-10 bg-white rounded-md shadow-md">
+            <h1 className="flex justify-center text-xl font-bold">
               Emergency Contact Details
             </h1>
             <div className="flex mt-4 ">
-              <img src={name} className="h-8 w-8" />
+              <img src={name} className="w-8 h-8" />
               <h1 className="mx-2"> {patient.contactPerson.name.firstName}</h1>
               <h1 className="mx-2">{patient.contactPerson.name.surName}</h1>
             </div>
@@ -155,7 +155,7 @@ const PatientProfile = (props) => {
             </div>
 
             <div className="flex mt-6">
-              <img src={address} className="h-7 w-8" />
+              <img src={address} className="w-8 h-7" />
               <div className="ml-4">
                 <h2>
                   {" "}
